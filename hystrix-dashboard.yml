@@ -1,0 +1,17 @@
+info:
+  component: Hystrix Dashboard
+  
+server:
+  port: 80
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-server/eureka/
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: DEBUG

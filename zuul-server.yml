@@ -1,0 +1,23 @@
+info:
+  component: Zuul Server
+  
+zuul:
+  ignoredServices: '*'
+  routes:
+    addresses: 
+      path: /addresses/**
+    
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://eureka-server/eureka/
+    registry-fetch-interval-seconds: 5
+
+spring:
+  rabbitmq:
+    addresses: rabbitmq:5672
+
+server:
+  port: ${port:80}

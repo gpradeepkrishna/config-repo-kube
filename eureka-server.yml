@@ -1,0 +1,11 @@
+server:
+  port: ${port:80}
+    
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+
+spring:
+  rabbitmq:
+    addresses: rabbitmq:5672

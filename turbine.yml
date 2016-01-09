@@ -1,0 +1,27 @@
+info:
+  component: Turbine
+
+spring:
+  rabbitmq:
+    addresses: rabbitmq:5672
+
+turbine:
+  clusterNameExpression: 'default'
+  appConfig: zuul
+
+server:
+  port: ${port:80}
+
+management:
+  port: -1
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-server/eureka/
+      
+logging:
+  level:
+    ROOT: DEBUG

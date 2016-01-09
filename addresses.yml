@@ -1,0 +1,25 @@
+spring:
+  rabbitmq:
+    addresses: rabbitmq:5672
+
+memcached:
+  addresses: memcached:11211
+
+server:
+  servlet-path: /management
+  port: ${port:80}
+
+address:
+  lookup:
+    parallelism: 15
+  
+eureka:
+  instance:
+    statusPageUrlPath: ${server.servlet-path}/info
+    healthCheckUrlPath: ${server.servlet-path}/health
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://eureka-server/eureka/
+    registry-fetch-interval-seconds: 5
