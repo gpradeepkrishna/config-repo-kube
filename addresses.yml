@@ -17,6 +17,7 @@ eureka:
   instance:
     statusPageUrlPath: ${server.servlet-path}/info
     healthCheckUrlPath: ${server.servlet-path}/health
+    preferIpAddress: true
   client:
     healthcheck:
       enabled: true
