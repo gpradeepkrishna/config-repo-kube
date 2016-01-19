@@ -21,3 +21,12 @@ spring:
 
 server:
   port: ${port:80}
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 30000
