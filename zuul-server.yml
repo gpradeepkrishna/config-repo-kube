@@ -5,7 +5,7 @@ zuul:
   ignoredServices: '*'
   routes:
     addresses: 
-      path: /addresses/v1/**
+      path: /addresses/**
     
 eureka:
   client:
